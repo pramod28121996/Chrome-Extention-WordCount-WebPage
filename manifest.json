@@ -1,0 +1,21 @@
+{
+  "name": "Action script injection demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Click to show an alert",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs",
+    "nativeMessaging"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "host_permissions": ["*://*/*", "<all_urls>"]
+}
