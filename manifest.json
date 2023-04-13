@@ -4,15 +4,18 @@
   "manifest_version": 3,
   "action": {
     "default_title": "Click to show an alert",
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": {
+      "32": "assets/32icon.png"
+    }
+  }, 
+  "icons":{
+    "16": "assets/48icon.png",
+    "32": "assets/32icon.png",
+    "48":"assets/48icon.png",
+    "128": "assets/128icon.png"
   },
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "storage",
-    "tabs",
-    "nativeMessaging"
-  ],
+  "permissions": ["activeTab", "scripting", "storage", "nativeMessaging"],
   "background": {
     "service_worker": "background.js",
     "type": "module"
